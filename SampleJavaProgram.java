@@ -83,7 +83,7 @@ public class SampleJavaProgram {
         employeeArrayList.add(e2);
 
         //Sort based on employee age
-       // Collections.sort(employeeArrayList, new EmployeeAgeComparator());
+        Collections.sort(employeeArrayList, new EmployeeAgeComparator());
 
         //Sort based on employee name
         Collections.sort(employeeArrayList, new EmployeeNameComparator());
@@ -106,7 +106,38 @@ public class SampleJavaProgram {
 
         ValidMethodWithTwoParametersAndReturn methodWithTwoParametersAndReturn = (a, b) -> a + b;
 
-        System.out.println(methodWithTwoParametersAndReturn.printMethod3(2, 6));
+        //System.out.println(methodWithTwoParametersAndReturn.printMethod3(2, 6));
+
+
+
+
+        //Reverse a String
+
+        String s1 = "Hello";
+        String reverseString = "";
+
+        int stringLength = s1.length();
+
+        for (int i = stringLength - 1; i >= 0; i--) {
+            reverseString = reverseString + s1.charAt(i);
+        }
+
+        //System.out.println(reverseString);
+
+
+        //Find if String is palindrome
+
+        String s2 = "Radar";
+        String reverseString1 = "";
+
+        for (int i = s2.length() - 1; i >= 0; i--) {
+            reverseString1 = reverseString1 + s2.charAt(i);
+        }
+
+        if (reverseString1.equalsIgnoreCase(s2)) {
+            System.out.println("String is palindrome");
+        } else
+            System.out.println("String is not palindrome");
 
     }
 
